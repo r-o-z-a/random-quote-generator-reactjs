@@ -1,0 +1,119 @@
+@import url("https://fonts.cdnfonts.com/css/linux-libertine-o");
+* {
+  font-family: "Linux Libertine Display O", sans-serif;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(239, 235, 235);
+}
+
+.wrapper {
+  color: rgb(67, 66, 66);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.quote {
+  margin: 1.5rem;
+  line-height: 2;
+  font-weight: 555;
+  font-size: 130%;
+  box-shadow: 0px 8px 24px 0px rgba(140, 149, 159, 0.2);
+  padding: 1rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  width: 89.5%;
+  padding: 1rem;
+  margin: 1rem 1rem 2rem 1rem;
+  font-size: 120%;
+  border: 1px rgb(177, 176, 176) dotted;
+  color: rgb(67, 66, 66);
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+button:active {
+  /* background-color: rgba(255, 255, 255, 0.896); */
+  opacity: 0.1;
+  transition: opacity 0.3s;
+}
+
+h1 {
+  font-weight: 100;
+  margin-top: 0;
+}
+
+.header {
+  display: flex;
+  padding: 2rem;
+  width: 100%;
+  /* height: 3rem; */
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-bottom: 0.01px rgb(177, 176, 176) dotted;
+}
+
+.right {
+  float: right;
+  transition: opacity 0.3s;
+  margin-left: 0.3rem;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+*.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode .quote {
+  box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode {
+  background-color: rgb(67, 66, 66);
+  color: rgb(239, 235, 235);
+}
+
+.toggle-dark-mode {
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .quote,
+  button {
+    font-size: 120%;
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .quote,
+  button {
+    font-size: 130%;
+    max-width: 60%;
+  }
+}
